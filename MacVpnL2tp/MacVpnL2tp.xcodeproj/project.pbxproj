@@ -1,0 +1,381 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		B00F5D4E1F9A485A003D0C7B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B00F5D4D1F9A485A003D0C7B /* AppDelegate.m */; };
+		B00F5D511F9A485A003D0C7B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B00F5D501F9A485A003D0C7B /* main.m */; };
+		B00F5D591F9A485A003D0C7B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B00F5D571F9A485A003D0C7B /* Main.storyboard */; };
+		B075B2501F9BB735002192AE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B075B24F1F9BB735002192AE /* Assets.xcassets */; };
+		B0A574821F9B2FD800DF40BC /* PreferenceWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = B0A574801F9B2FD800DF40BC /* PreferenceWindow.m */; };
+		B0A574831F9B2FD800DF40BC /* PreferenceWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = B0A574811F9B2FD800DF40BC /* PreferenceWindow.xib */; };
+		B0A5749D1F9B30EA00DF40BC /* connectVPN.sh in Resources */ = {isa = PBXBuildFile; fileRef = B0A574951F9B30EA00DF40BC /* connectVPN.sh */; };
+		B0A5749E1F9B30EA00DF40BC /* copyoptions.sh in Resources */ = {isa = PBXBuildFile; fileRef = B0A574961F9B30EA00DF40BC /* copyoptions.sh */; };
+		B0A5749F1F9B30EA00DF40BC /* disconnectVPN.sh in Resources */ = {isa = PBXBuildFile; fileRef = B0A574971F9B30EA00DF40BC /* disconnectVPN.sh */; };
+		B0A574A01F9B30EA00DF40BC /* listenVPN.sh in Resources */ = {isa = PBXBuildFile; fileRef = B0A574981F9B30EA00DF40BC /* listenVPN.sh */; };
+		B0A574A11F9B30EA00DF40BC /* login.json in Resources */ = {isa = PBXBuildFile; fileRef = B0A574991F9B30EA00DF40BC /* login.json */; };
+		B0A574A21F9B30EA00DF40BC /* options in Resources */ = {isa = PBXBuildFile; fileRef = B0A5749A1F9B30EA00DF40BC /* options */; };
+		B0A574A31F9B30EA00DF40BC /* setupVPN.sh in Resources */ = {isa = PBXBuildFile; fileRef = B0A5749B1F9B30EA00DF40BC /* setupVPN.sh */; };
+		B0A574A81F9B313F00DF40BC /* STPrivilegedTask.m in Sources */ = {isa = PBXBuildFile; fileRef = B0A574A71F9B313F00DF40BC /* STPrivilegedTask.m */; };
+		B0E09B342013594C00B19492 /* VPNManager in Resources */ = {isa = PBXBuildFile; fileRef = B0E09B332013594C00B19492 /* VPNManager */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		B00F5D491F9A485A003D0C7B /* MacVpnL2tp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MacVpnL2tp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B00F5D4C1F9A485A003D0C7B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		B00F5D4D1F9A485A003D0C7B /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		B00F5D501F9A485A003D0C7B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		B00F5D581F9A485A003D0C7B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		B00F5D5A1F9A485A003D0C7B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B075B24F1F9BB735002192AE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		B0A5747F1F9B2FD800DF40BC /* PreferenceWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PreferenceWindow.h; sourceTree = "<group>"; };
+		B0A574801F9B2FD800DF40BC /* PreferenceWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PreferenceWindow.m; sourceTree = "<group>"; };
+		B0A574811F9B2FD800DF40BC /* PreferenceWindow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PreferenceWindow.xib; sourceTree = "<group>"; };
+		B0A574951F9B30EA00DF40BC /* connectVPN.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = connectVPN.sh; sourceTree = "<group>"; };
+		B0A574961F9B30EA00DF40BC /* copyoptions.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = copyoptions.sh; sourceTree = "<group>"; };
+		B0A574971F9B30EA00DF40BC /* disconnectVPN.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = disconnectVPN.sh; sourceTree = "<group>"; };
+		B0A574981F9B30EA00DF40BC /* listenVPN.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = listenVPN.sh; sourceTree = "<group>"; };
+		B0A574991F9B30EA00DF40BC /* login.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = login.json; sourceTree = "<group>"; };
+		B0A5749A1F9B30EA00DF40BC /* options */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = options; sourceTree = "<group>"; };
+		B0A5749B1F9B30EA00DF40BC /* setupVPN.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = setupVPN.sh; sourceTree = "<group>"; };
+		B0A574A61F9B313F00DF40BC /* STPrivilegedTask.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STPrivilegedTask.h; sourceTree = "<group>"; };
+		B0A574A71F9B313F00DF40BC /* STPrivilegedTask.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STPrivilegedTask.m; sourceTree = "<group>"; };
+		B0E09B332013594C00B19492 /* VPNManager */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = VPNManager; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		B00F5D461F9A485A003D0C7B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		B00F5D401F9A485A003D0C7B = {
+			isa = PBXGroup;
+			children = (
+				B0A574841F9B305100DF40BC /* Resource */,
+				B00F5D4B1F9A485A003D0C7B /* MacVpnL2tp */,
+				B00F5D4A1F9A485A003D0C7B /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		B00F5D4A1F9A485A003D0C7B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B00F5D491F9A485A003D0C7B /* MacVpnL2tp.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B00F5D4B1F9A485A003D0C7B /* MacVpnL2tp */ = {
+			isa = PBXGroup;
+			children = (
+				B0A574A51F9B313500DF40BC /* STPrivilegedTask */,
+				B0A5747F1F9B2FD800DF40BC /* PreferenceWindow.h */,
+				B0A574801F9B2FD800DF40BC /* PreferenceWindow.m */,
+				B0A574811F9B2FD800DF40BC /* PreferenceWindow.xib */,
+				B00F5D4C1F9A485A003D0C7B /* AppDelegate.h */,
+				B00F5D4D1F9A485A003D0C7B /* AppDelegate.m */,
+				B075B24F1F9BB735002192AE /* Assets.xcassets */,
+				B00F5D571F9A485A003D0C7B /* Main.storyboard */,
+				B00F5D5A1F9A485A003D0C7B /* Info.plist */,
+				B00F5D4F1F9A485A003D0C7B /* Supporting Files */,
+			);
+			path = MacVpnL2tp;
+			sourceTree = "<group>";
+		};
+		B00F5D4F1F9A485A003D0C7B /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				B00F5D501F9A485A003D0C7B /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		B0A574841F9B305100DF40BC /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				B0E09B332013594C00B19492 /* VPNManager */,
+				B0A574951F9B30EA00DF40BC /* connectVPN.sh */,
+				B0A574961F9B30EA00DF40BC /* copyoptions.sh */,
+				B0A574971F9B30EA00DF40BC /* disconnectVPN.sh */,
+				B0A574981F9B30EA00DF40BC /* listenVPN.sh */,
+				B0A574991F9B30EA00DF40BC /* login.json */,
+				B0A5749A1F9B30EA00DF40BC /* options */,
+				B0A5749B1F9B30EA00DF40BC /* setupVPN.sh */,
+			);
+			name = Resource;
+			sourceTree = "<group>";
+		};
+		B0A574A51F9B313500DF40BC /* STPrivilegedTask */ = {
+			isa = PBXGroup;
+			children = (
+				B0A574A61F9B313F00DF40BC /* STPrivilegedTask.h */,
+				B0A574A71F9B313F00DF40BC /* STPrivilegedTask.m */,
+			);
+			name = STPrivilegedTask;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		B00F5D481F9A485A003D0C7B /* MacVpnL2tp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B00F5D5D1F9A485B003D0C7B /* Build configuration list for PBXNativeTarget "MacVpnL2tp" */;
+			buildPhases = (
+				B00F5D451F9A485A003D0C7B /* Sources */,
+				B00F5D461F9A485A003D0C7B /* Frameworks */,
+				B00F5D471F9A485A003D0C7B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MacVpnL2tp;
+			productName = MacVpnL2tp;
+			productReference = B00F5D491F9A485A003D0C7B /* MacVpnL2tp.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B00F5D411F9A485A003D0C7B /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0920;
+				ORGANIZATIONNAME = " 沈江洋";
+				TargetAttributes = {
+					B00F5D481F9A485A003D0C7B = {
+						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = WE75FSTGV9;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = B00F5D441F9A485A003D0C7B /* Build configuration list for PBXProject "MacVpnL2tp" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = B00F5D401F9A485A003D0C7B;
+			productRefGroup = B00F5D4A1F9A485A003D0C7B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B00F5D481F9A485A003D0C7B /* MacVpnL2tp */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		B00F5D471F9A485A003D0C7B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B0A574A21F9B30EA00DF40BC /* options in Resources */,
+				B0A5749E1F9B30EA00DF40BC /* copyoptions.sh in Resources */,
+				B075B2501F9BB735002192AE /* Assets.xcassets in Resources */,
+				B0E09B342013594C00B19492 /* VPNManager in Resources */,
+				B0A5749F1F9B30EA00DF40BC /* disconnectVPN.sh in Resources */,
+				B0A574A31F9B30EA00DF40BC /* setupVPN.sh in Resources */,
+				B0A5749D1F9B30EA00DF40BC /* connectVPN.sh in Resources */,
+				B0A574A11F9B30EA00DF40BC /* login.json in Resources */,
+				B0A574A01F9B30EA00DF40BC /* listenVPN.sh in Resources */,
+				B0A574831F9B2FD800DF40BC /* PreferenceWindow.xib in Resources */,
+				B00F5D591F9A485A003D0C7B /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B00F5D451F9A485A003D0C7B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B00F5D511F9A485A003D0C7B /* main.m in Sources */,
+				B0A574821F9B2FD800DF40BC /* PreferenceWindow.m in Sources */,
+				B0A574A81F9B313F00DF40BC /* STPrivilegedTask.m in Sources */,
+				B00F5D4E1F9A485A003D0C7B /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		B00F5D571F9A485A003D0C7B /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B00F5D581F9A485A003D0C7B /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		B00F5D5B1F9A485B003D0C7B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		B00F5D5C1F9A485B003D0C7B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		B00F5D5E1F9A485B003D0C7B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = WE75FSTGV9;
+				INFOPLIST_FILE = MacVpnL2tp/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				PRODUCT_BUNDLE_IDENTIFIER = jiangyang.MacVpnL2tp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		B00F5D5F1F9A485B003D0C7B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = WE75FSTGV9;
+				INFOPLIST_FILE = MacVpnL2tp/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				PRODUCT_BUNDLE_IDENTIFIER = jiangyang.MacVpnL2tp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		B00F5D441F9A485A003D0C7B /* Build configuration list for PBXProject "MacVpnL2tp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B00F5D5B1F9A485B003D0C7B /* Debug */,
+				B00F5D5C1F9A485B003D0C7B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B00F5D5D1F9A485B003D0C7B /* Build configuration list for PBXNativeTarget "MacVpnL2tp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B00F5D5E1F9A485B003D0C7B /* Debug */,
+				B00F5D5F1F9A485B003D0C7B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = B00F5D411F9A485A003D0C7B /* Project object */;
+}
