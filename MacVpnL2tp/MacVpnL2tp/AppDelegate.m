@@ -70,14 +70,14 @@
 {
     if(isConnected)
     {
-        [_connectionItem setTitle: @"连接状态: On"];
+        [_connectionItem setTitle: @"Status: On"];
         [_connectItem setEnabled: NO];
         [_disconnectItem setEnabled: YES];
         [preferenceWindow close];
     }
     else
     {
-        [_connectionItem setTitle: @"连接状态: Off"];
+        [_connectionItem setTitle: @"Status: Off"];
         [_connectItem setEnabled: YES];
         [_disconnectItem setEnabled: NO];
     }

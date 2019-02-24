@@ -10,9 +10,8 @@
 #import "STPrivilegedTask.h"
 
 const NSString* g_vpnName=@"MacVpnL2TP";
-//consider ip a.b.c.d, g_serverIP = a * 256 ^ 3 + b * 256 ^ 2 + c * 256 + d;
-//following is the ip of Zhejiang University, feel free to change it
-const NSString* g_serverIP=@"168100103";
+
+const NSString* g_serverKey=@"Server";
 const NSString* g_userNameKey=@"UserName";
 const NSString* g_passwordKey=@"Password";
 
@@ -162,10 +161,10 @@ const NSString* g_passwordKey=@"Password";
     [self logMessage:@"trying to setup vpn."];
     NSString* userString=[[_tfUser stringValue] stringByReplacingOccurrencesOfString:@" " withString:@""];
     NSString* passwordString=[[_stfPassword stringValue] stringByReplacingOccurrencesOfString:@" " withString:@""];
-    NSString* serverString=[g_serverIP stringByReplacingOccurrencesOfString:@" " withString:@""];
+    NSString* serverString=[[_tfServer stringValue] stringByReplacingOccurrencesOfString:@" " withString:@""];
     if(userString.length==0||passwordString.length==0||serverString.length==0)
     {
-//        [self logMessage:@"输入不能为空！"];
+//        [self logMessage:@"输入不能为空!"];
         [self logMessage:@"fill up the blanks, please."];
         [self updateConnectStatus];
         return NO;
@@ -187,10 +186,10 @@ const NSString* g_passwordKey=@"Password";
     [self logMessage:@"start to connect."];
     NSString* userString=[[_tfUser stringValue] stringByReplacingOccurrencesOfString:@" " withString:@""];
     NSString* passwordString=[[_stfPassword stringValue] stringByReplacingOccurrencesOfString:@" " withString:@""];
-    NSString* serverString=[g_serverIP stringByReplacingOccurrencesOfString:@" " withString:@""];
+    NSString* serverString=[[_tfServer stringValue] stringByReplacingOccurrencesOfString:@" " withString:@""];
     if(userString.length==0||passwordString.length==0||serverString.length==0)
     {
-//        [self logMessage:@"输入不能为空！"];
+//        [self logMessage:@"输入不能为空!"];
         [self logMessage:@"fill up the blanks, please."];
         [self updateConnectStatus];
     }
@@ -201,14 +200,14 @@ const NSString* g_passwordKey=@"Password";
         [self updateConnectStatus];
         if(m_isConnected)
         {
-//            [self logMessage:@"网络已经连接！！！"];
-            [self logMessage:@"connected！！！"];
+//            [self logMessage:@"网络已经连接!!!"];
+            [self logMessage:@"connected!!!"];
             m_listenVPNTimer = [NSTimer scheduledTimerWithTimeInterval:2.0 target:self selector:@selector(listenVPN) userInfo:nil repeats:YES];
         }
         else
         {
-//            [self logMessage:@"网络连接失败！！！\n请确保wifi正确连接！！！\n并检查输入参数是否正确！！！\n并确保没有连接其他VPN！！！"];
-            [self logMessage:@"failed！！！\nmake sure wifi is on！！！\ncheck parameters！！！\nmake sure no other vpn connected！！！"];
+//            [self logMessage:@"网络连接失败!!!\n请确保wifi正确连接!!!\n并检查输入参数是否正确!!!\n并确保没有连接其他VPN!!!"];
+            [self logMessage:@"failed!!!\ncheck parameters!!!\ncheck physical connection!!!\nmake sure no other vpn connected!!!"];
             m_isInfoChanged=true;
         }
     }
@@ -222,8 +221,8 @@ const NSString* g_passwordKey=@"Password";
     [self runNSTask:cmdString];
     m_isConnected=NO;
     [self updateConnectStatus];
-//    [self logMessage:@"网络已经断开！！！"];
-    [self logMessage:@"disconnected！！！"];
+//    [self logMessage:@"网络已经断开!!!"];
+    [self logMessage:@"disconnected!!!"];
 }
 
 -(void) listenVPN
@@ -238,8 +237,8 @@ const NSString* g_passwordKey=@"Password";
         {
             m_isConnected=NO;
             [self updateConnectStatus];
-//            [self logMessage:@"网络已经断开！！！"];
-            [self logMessage:@"disconnected！！！"];
+//            [self logMessage:@"网络已经断开!!!"];
+            [self logMessage:@"disconnected!!!"];
         }
     }
 }
@@ -301,8 +300,8 @@ const NSString* g_passwordKey=@"Password";
             [self logMessage:@"user canceled."];
             return NO;
         }  else {
-//            [self logMessage:@"出现未知异常！"];
-            [self logMessage:@"unknown error！"];
+//            [self logMessage:@"出现未知异常!"];
+            [self logMessage:@"unknown error!"];
         }
     }
     
@@ -357,8 +356,10 @@ const NSString* g_passwordKey=@"Password";
                                     options:NSJSONReadingMutableContainers
                                       error:&err];
     NSMutableDictionary *dictionary = arr[0];
+    NSString *serverString=[dictionary objectForKey:g_serverKey];
     NSString *userNameString=[dictionary objectForKey:g_userNameKey];
     NSString *passwordString=[dictionary objectForKey:g_passwordKey];
+    [_tfServer setStringValue:serverString];
     [_tfUser setStringValue:userNameString];
     [_stfPassword setStringValue:passwordString];
 }
@@ -367,8 +368,10 @@ const NSString* g_passwordKey=@"Password";
 {
     NSString *userNameString=[_tfUser stringValue];
     NSString *passwordString=[_stfPassword stringValue];
-    NSString *serverIPString=g_serverIP;
-    NSDictionary * dictionary = [NSDictionary dictionaryWithObjectsAndKeys:userNameString, g_userNameKey,
+    NSString *serverIPString=[_tfServer stringValue];
+    NSDictionary * dictionary = [NSDictionary dictionaryWithObjectsAndKeys:
+                                 serverIPString, g_serverKey,
+                                 userNameString, g_userNameKey,
                                  passwordString, g_passwordKey, nil];
     NSArray * arr = [NSArray arrayWithObjects:dictionary, nil];
     NSData * data = [NSJSONSerialization dataWithJSONObject:arr options:NSJSONWritingPrettyPrinted error:nil];

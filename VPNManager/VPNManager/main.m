@@ -46,23 +46,7 @@ int main(int argc, const char * argv[]) {
         config.name=[NSString stringWithUTF8String:argv[1]];
         config.username=[NSString stringWithUTF8String:argv[2]];
         config.password=[NSString stringWithUTF8String:argv[3]];
-        
-        NSString *endpointStringNumber=[NSString stringWithUTF8String:argv[4]];
-        long long endpointLongNumber= [endpointStringNumber longLongValue];
-        config.endpoint=@"";
-        long tempMode=endpointLongNumber%256;
-        endpointLongNumber/=256;
-        //consider ip a.b.c.d, endpointLongNumber = a * 256 ^ 3 + b * 256 ^ 2 + c * 256 + d;
-        config.endpoint= [NSString stringWithFormat: @"%d", tempMode];
-        NSString *splitter=@".";
-        for(int i=0;i<3;++i)
-        {
-            tempMode=endpointLongNumber%256;
-            endpointLongNumber/=256;
-            NSString *preString=[NSString stringWithFormat: @"%d.", tempMode];
-            config.endpoint=[preString stringByAppendingString:config.endpoint];
-        }
-        
+        config.endpoint=[NSString stringWithUTF8String:argv[4]];
         config.disconnectOnSwitch=YES;
         config.disconnectOnLogout=YES;
         
@@ -74,6 +58,22 @@ int main(int argc, const char * argv[]) {
         }
         
         return exitCode;
+        
+//        NSString *endpointStringNumber=[NSString stringWithUTF8String:argv[4]];
+//        long long endpointLongNumber= [endpointStringNumber longLongValue];
+//        config.endpoint=@"";
+//        long tempMode=endpointLongNumber%256;
+//        endpointLongNumber/=256;
+//        //consider ip a.b.c.d, endpointLongNumber = a * 256 ^ 3 + b * 256 ^ 2 + c * 256 + d;
+//        config.endpoint= [NSString stringWithFormat: @"%d", tempMode];
+//        NSString *splitter=@".";
+//        for(int i=0;i<3;++i)
+//        {
+//            tempMode=endpointLongNumber%256;
+//            endpointLongNumber/=256;
+//            NSString *preString=[NSString stringWithFormat: @"%d.", tempMode];
+//            config.endpoint=[preString stringByAppendingString:config.endpoint];
+//        }
     }
     
 }

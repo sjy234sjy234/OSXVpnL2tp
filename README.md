@@ -8,7 +8,7 @@ The process simulate whole process of l2tp vpn setup and connection on OS X plat
 VPNManager and MacVpnL2tp. VPNManager is the project for VPN creation exec. MacVpnL2tp arranges commandlines, VPNManager, UI and other trivias together as the final app.
 
 # Initial server IP is 10.5.1.7, 
-Initial IP represents Zhejiang University. Feel free to change IP value in the source code if necessary.
+Initial IP represents Zhejiang University. Feel free to change IP value if necessary.
 
 # Drawback
 The application occupies system vpn tunnel while running. Consequence is that vpn apps such as shadowsocks will be invalid. Instead we can use SwitchyOmega on Chrome to access outer vpns.  

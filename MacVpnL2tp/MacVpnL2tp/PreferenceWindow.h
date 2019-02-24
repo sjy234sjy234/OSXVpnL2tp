@@ -22,9 +22,13 @@
 
 @interface PreferenceWindow : NSWindowController
 
+@property (weak) IBOutlet NSTextField *labelServer;
+
 @property (weak) IBOutlet NSTextField *labelUser;
 
 @property (weak) IBOutlet NSTextField *labelPassword;
+
+@property (weak) IBOutlet NSTextField *tfServer;
 
 @property (weak) IBOutlet NSTextField *tfUser;
 
